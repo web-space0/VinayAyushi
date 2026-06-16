@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Endless Memories | A Family Heirloom</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Lato:wght@300;400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <audio id="bg-music" loop>
+        <source src="audio/ambient-music.mp3" type="audio/mpeg">
+    </audio>
+
+    <div id="music-controller" class="hidden">
+        <button id="toggle-music" title="Play/Pause Music">🎵 Play Music</button>
+    </div>
+
+    <div id="password-screen" class="fullscreen-overlay">
+        <div class="overlay-content">
+            <h1 class="serif">For Our Family, With Love.</h1>
+            <p class="sans">Please enter the family password to begin the journey.</p>
+            <input type="password" id="family-password" placeholder="Enter Password">
+            <button id="enter-btn" class="luxury-btn">Enter</button>
+            <p id="password-error" class="hidden error-text">Incorrect password. Please try again.</p>
+        </div>
+        <div id="particles-container"></div>
+    </div>
+
+    <div id="loader" class="fullscreen-overlay hidden">
+        <div class="monogram">
+            <span class="gold-initial">S</span> <span class="ampersand">&</span> <span class="gold-initial">A</span>
+        </div>
+        <div class="loader-line"></div>
+    </div>
+
+    <main id="main-content" class="hidden">
+        
+        <section id="hero">
+            <div class="hero-bg parallax" style="background-image: url('images/photo-1.jpg');"></div>
+            <div class="hero-overlay"></div>
+            <div class="hero-content reveal">
+                <h1 class="serif gold-text title-anim">Two Hearts. One Celebration.<br>Endless Memories.</h1>
+                <p class="sans subheading fade-up">A journey through love, laughter, blessings, and the moments that made our family complete.</p>
+            </div>
+            <div class="scroll-indicator">
+                <span class="mouse"></span>
+                <p>Scroll to begin</p>
+            </div>
+        </section>
+
+        <section class="chapter" id="chapter-1">
+            <div class="chapter-header reveal">
+                <h2 class="serif">Chapter I &mdash; The Beginning</h2>
+                <p class="quote">"Every great love story begins with a single, quiet moment of certainty."</p>
+            </div>
+            <div class="gallery grid-2 reveal">
+                <img src="images/photo-1.jpg" class="gallery-img zoom-hover" alt="The Beginning 1">
+                <img src="images/photo-2.jpg" class="gallery-img zoom-hover" alt="The Beginning 2">
+            </div>
+        </section>
+
+        <section class="chapter alternate" id="chapter-2">
+            <div class="chapter-header reveal">
+                <h2 class="serif">Chapter II &mdash; Haldi</h2>
+                <p class="quote">"Joyful moments, playful traditions, and golden laughter."</p>
+            </div>
+            <div class="gallery masonry reveal">
+                <img src="images/photo-3.jpg" class="gallery-img zoom-hover" alt="Haldi 1">
+                <img src="images/photo-4.jpg" class="gallery-img zoom-hover" alt="Haldi 2">
+                <img src="images/photo-5.jpg" class="gallery-img zoom-hover" alt="Haldi 3">
+            </div>
+        </section>
+
+        <section class="chapter" id="chapter-3">
+            <div class="chapter-header reveal">
+                <h2 class="serif">Chapter III &mdash; Mehendi</h2>
+                <p class="quote">"Artistry, sisterhood, and the beautiful anticipation of tomorrow."</p>
+            </div>
+            <div class="gallery grid-3 reveal">
+                <img src="images/photo-6.jpg" class="gallery-img zoom-hover" alt="Mehendi 1">
+                <img src="images/photo-7.jpg" class="gallery-img zoom-hover" alt="Mehendi 2">
+                <img src="images/photo-8.jpg" class="gallery-img zoom-hover" alt="Mehendi 3">
+            </div>
+        </section>
+
+        <section class="chapter alternate" id="chapter-4">
+            <div class="chapter-header reveal">
+                <h2 class="serif">Chapter IV &mdash; Sangeet</h2>
+                <p class="quote">"Music, dance, and a celebration of two families becoming one."</p>
+            </div>
+            <div class="gallery masonry reveal">
+                <img src="images/photo-9.jpg" class="gallery-img zoom-hover" alt="Sangeet 1">
+                <img src="images/photo-10.jpg" class="gallery-img zoom-hover" alt="Sangeet 2">
+                <img src="images/photo-11.jpg" class="gallery-img zoom-hover" alt="Sangeet 3">
+            </div>
+        </section>
+
+        <section class="chapter" id="chapter-5">
+            <div class="chapter-header reveal">
+                <h2 class="serif">Chapter V &mdash; The Ceremony</h2>
+                <p class="quote">"Grandeur, sacred rituals, and the timeless weight of tradition."</p>
+            </div>
+            <div class="gallery grid-3 reveal">
+                <img src="images/photo-12.jpg" class="gallery-img zoom-hover" alt="Ceremony 1">
+                <img src="images/photo-13.jpg" class="gallery-img zoom-hover" alt="Ceremony 2">
+                <img src="images/photo-14.jpg" class="gallery-img zoom-hover" alt="Ceremony 3">
+            </div>
+        </section>
+
+        <section class="chapter alternate" id="chapter-6">
+            <div class="chapter-header reveal">
+                <h2 class="serif">Chapter VI &mdash; Sacred Vows</h2>
+                <p class="quote">"Promises whispered under the canopy of blessings."</p>
+            </div>
+            <div class="gallery grid-2 reveal">
+                <img src="images/photo-15.jpg" class="gallery-img zoom-hover" alt="Vows 1">
+                <img src="images/photo-16.jpg" class="gallery-img zoom-hover" alt="Vows 2">
+            </div>
+        </section>
+
+        <section class="chapter" id="chapter-7">
+            <div class="chapter-header reveal">
+                <h2 class="serif">Chapter VII &mdash; Family & Blessings</h2>
+                <p class="quote">"Rooted in Love, Guided by Blessings."</p>
+            </div>
+            <div class="gallery grid-2 reveal">
+                <img src="images/photo-17.jpg" class="gallery-img zoom-hover" alt="Family 1">
+                <img src="images/photo-18.jpg" class="gallery-img zoom-hover" alt="Family 2">
+            </div>
+        </section>
+
+        <section class="chapter alternate" id="chapter-8">
+            <div class="chapter-header reveal">
+                <h2 class="serif">Chapter VIII &mdash; The Grand Finale</h2>
+                <p class="quote">"A bittersweet departure into a beautiful new dawn."</p>
+            </div>
+            <div class="gallery grid-2 reveal">
+                <img src="images/photo-19.jpg" class="gallery-img zoom-hover" alt="Finale 1">
+                <img src="images/photo-20.jpg" class="gallery-img zoom-hover" alt="Finale 2">
+            </div>
+        </section>
+
+        <section id="timeline" class="reveal">
+            <h2 class="serif text-center gold-text">The Journey of Love</h2>
+            <div class="timeline-container">
+                <div class="timeline-item"><div class="dot"></div><p>Engagement</p></div>
+                <div class="timeline-item"><div class="dot"></div><p>Haldi</p></div>
+                <div class="timeline-item"><div class="dot"></div><p>Mehendi</p></div>
+                <div class="timeline-item"><div class="dot"></div><p>Sangeet</p></div>
+                <div class="timeline-item"><div class="dot"></div><p>Wedding Ceremony</p></div>
+                <div class="timeline-item"><div class="dot"></div><p>Sacred Vows</p></div>
+                <div class="timeline-item"><div class="dot"></div><p>Reception</p></div>
+            </div>
+        </section>
+
+        <section id="guestbook" class="reveal">
+            <div class="glass-panel">
+                <h2 class="serif gold-text">Leave a Memory for Tomorrow</h2>
+                <p class="sans">Share your blessings for the family archive.</p>
+                <form id="guestbook-form">
+                    <input type="text" id="gb-name" placeholder="Your Name" required>
+                    <textarea id="gb-message" placeholder="Your Blessing..." rows="4" required></textarea>
+                    <button type="submit" class="luxury-btn">Seal with Love</button>
+                </form>
+                <div id="guestbook-entries"></div>
+            </div>
+        </section>
+
+        <footer id="finale" class="reveal">
+            <div class="finale-content">
+                <h2 class="serif">Thank You</h2>
+                <p class="sans">"Thank you for celebrating with us, blessing us, and becoming part of the memories we will treasure forever."</p>
+                <div class="monogram small"><span>S</span> & <span>A</span></div>
+                <h1 class="serif gold-text fade-in-delay">And so, a beautiful new chapter began...</h1>
+                <h3 class="serif">Happily Ever After.</h3>
+            </div>
+        </footer>
+
+    </main>
+
+    <div id="lightbox" class="hidden">
+        <span id="lightbox-close">&times;</span>
+        <img id="lightbox-img" src="" alt="Fullscreen view">
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
